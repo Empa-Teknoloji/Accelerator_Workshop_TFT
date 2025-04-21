@@ -142,29 +142,17 @@
     <Filter Include="Source Files\gui\model">
       <UniqueIdentifier>36F44992-C6AB-F8E5-6AA5-9D367DF36393</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\screen_screen">
-      <UniqueIdentifier>ECAF4045-4A03-52C0-DF7D-4313ADFD09C8</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\generated\gui_generated">
       <UniqueIdentifier>7754B0F7-8FB7-CF5C-4C2E-8B89604D1B36</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\gui\common">
       <UniqueIdentifier>5828A94D-08CB-7704-2A9C-8434B500CDBE</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\screen_screen">
-      <UniqueIdentifier>F5BD4DA9-6B6E-D3AA-042C-32EE762EF9A6</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\generated\gui_generated">
       <UniqueIdentifier>72A9AF86-6529-8999-C3D1-F6153F3E548B</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\gui\common">
       <UniqueIdentifier>F6D700C5-DFA3-E4AA-AF54-BFEF5DCCC5AB</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\screen_screen">
-      <UniqueIdentifier>8681DA91-9EDD-9F75-1B54-43BB9BB44910</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\screen_screen">
-      <UniqueIdentifier>C480D4BD-A3E3-28D1-025D-35041799B2AD</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\generated\simulator\include">
       <UniqueIdentifier>088E58E6-076E-8033-0F34-36E0F316BABD</UniqueIdentifier>
@@ -190,17 +178,11 @@
     <Filter Include="Header Files\gui\screen1_screen">
       <UniqueIdentifier>F6E00E89-3967-C45D-BC00-0876C676C824</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\keyboard_screen">
-      <UniqueIdentifier>D37B3874-5BB3-7459-F2BB-8FB6FB721EF8</UniqueIdentifier>
+    <Filter Include="Source Files\generated\gui_generated\screen1_screen">
+      <UniqueIdentifier>1E322862-9A92-6599-8032-33A49E60ABC2</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\keyboard_screen">
-      <UniqueIdentifier>3E57A93C-74F9-DE2B-5C77-5E5A85A7B75D</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gui\custom_coffee_screen">
-      <UniqueIdentifier>F941FD94-ABD5-72E2-AEDB-F8B8E522D699</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\gui\custom_coffee_screen">
-      <UniqueIdentifier>A5E41EAE-667B-E906-3702-ABB8FED0970F</UniqueIdentifier>
+    <Filter Include="Header Files\generated\gui_generated\screen1_screen">
+      <UniqueIdentifier>533BCA8A-04AB-99AD-0395-85AD6841CFE9</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -231,15 +213,6 @@
     <ClCompile Include="..\..\gui\src\model\Model.cpp">
       <Filter>Source Files\gui\model</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen_screen\screenPresenter.cpp">
-      <Filter>Source Files\gui\screen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen_screen\screenView.cpp">
-      <Filter>Source Files\gui\screen_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen_screen\screenViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\screen_screen</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
       <Filter>Source Files\generated\simulator\video</Filter>
     </ClCompile>
@@ -249,11 +222,8 @@
     <ClCompile Include="..\..\gui\src\screen1_screen\Screen1View.cpp">
       <Filter>Source Files\gui\screen1_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\keyboard_screen\keyboardView.cpp">
-      <Filter>Source Files\gui\keyboard_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\custom_coffee_screen\custom_coffeeView.cpp">
-      <Filter>Source Files\gui\custom_coffee_screen</Filter>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen1_screen\Screen1ViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen1_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -691,15 +661,6 @@
     <ClInclude Include="..\..\gui\include\gui\model\ModelListener.hpp">
       <Filter>Header Files\gui\model</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen_screen\screenPresenter.hpp">
-      <Filter>Header Files\gui\screen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen_screen\screenView.hpp">
-      <Filter>Header Files\gui\screen_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen_screen\screenViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\screen_screen</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp">
       <Filter>Header Files\generated\gui_generated\common</Filter>
     </ClInclude>
@@ -712,20 +673,8 @@
     <ClInclude Include="..\..\gui\include\gui\screen1_screen\Screen1View.hpp">
       <Filter>Header Files\gui\screen1_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\common\CustomKeyboard.hpp">
-      <Filter>Header Files\gui\common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\common\KeyboardKeyMapping.hpp">
-      <Filter>Header Files\gui\common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\common\KeyboardLayout.hpp">
-      <Filter>Header Files\gui\common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\keyboard_screen\keyboardView.hpp">
-      <Filter>Header Files\gui\keyboard_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\custom_coffee_screen\custom_coffeeView.hpp">
-      <Filter>Header Files\gui\custom_coffee_screen</Filter>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen1_screen\Screen1ViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen1_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

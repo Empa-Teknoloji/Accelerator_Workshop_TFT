@@ -38,7 +38,7 @@ static TouchGFXDataReader dataReader;
 static LCD16bppSerialFlash display(dataReader);
 static ApplicationFontProvider fontProvider;
 static Texts texts;
-static TouchGFXHAL hal(dma, display, tc, 240, 320);
+static TouchGFXHAL hal(dma, display, tc, 320, 240);
 
 void touchgfx_init()
 {

@@ -2,7 +2,7 @@
   "Application": {
     "Screens": [
       {
-        "Name": "screen",
+        "Name": "Screen1",
         "Components": [],
         "Interactions": []
       }
@@ -14,7 +14,7 @@
       "Height": 320
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "screen",
+    "StartupScreenName": "Screen1",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",
@@ -38,7 +38,7 @@
     "FrameworkFeatures": {
       "LCD16bppSerialFlash": {
         "Id": "LCD16bppSerialFlash",
-        "IsEnabled": true
+        "IsEnabled": false
       }
     },
     "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
@@ -50,7 +50,7 @@
     "LandscapeSkinY": 0,
     "PortraitSkinX": 0,
     "PortraitSkinY": 0,
-    "DisplayOrientation": "Landscape",
+    "DisplayOrientation": "Portrait",
     "Family": "STM32G0",
     "SubFamily": "STM32G0x1",
     "Toolchain": "STM32CubeIDE",
