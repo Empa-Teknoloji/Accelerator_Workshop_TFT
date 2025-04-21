@@ -6,7 +6,7 @@ STM32CubeIDE, STM32 mikrodenetleyicileri ve mikroişlemcileri için gerekli çev
 Öncelikle [buradan](https://www.st.com/en/development-tools/stm32cubeide.html#get-software) STM32CubeIDE'nin en son versiyonunu indiriniz. Aşağıdaki seçenekler arasından işletim sisteminize uygun olanı indirip kurulumunu gerçekleştirin. İndirme işlemini gerçekleştirmek için lisans sözleşmesini onaylamanız ve myST hesabı oluşturup giriş yapmanız gerekmektedir.
 
 <div align="center">
-  <img width="100%" height="70%" src="Documents/Images/STM32CubeID_download_1.png">
+  <img width="80%" height="70%" src="Documents/Images/STM32CubeID_download_1.png">
 </div>
 <br />
 
@@ -14,7 +14,17 @@ STM32CubeIDE, STM32 mikrodenetleyicileri ve mikroişlemcileri için gerekli çev
 
 **NOT 2:** Kurulum sırasında ST-LINK ve SEGGER J-Link sürücülerinin yüklenip yüklenmeyeceği sorulacaktır. Bu sürücüleri seçip yükleme işlemlerine devam ediniz.
 
-## 2-Software Paketlerinin Kurulumu
+## 2-STM32CubeProgrammer Kurulumu  
+
+STM32CubeProgrammer, STM32 mikrodenetleyicileri programlama ve konfigürasyonlarını ayarlamak için tasarlanmış grafiksel bir araçtır.
+Öncelikle buradan STM32CubePrg 2.19.0 (son sürüm) versiyonunu indiriniz. Aşağıdaki seçenekler arasından işletim sisteminize uygun olanı indirip kurulumunu gerçekleştirin. İndirme işlemini gerçekleştirmek için lisans sözleşmesini onaylamanız ve myST hesabınıza giriş yapmış olmanız gerekmektedir.
+
+<div align="center">
+  <img width="80%" height="70%" src="Documents/Images/stm32programmer.png">
+</div>
+<br />
+
+## 3-Software Paketlerinin Kurulumu
 Öncelikle STM32CubeIDE'yi başlatıyoruz. Paketlerin kurulumu işlemi için mySt hesabının girilmesi gerekmektedir. Bunun için Help sekmesinin altındaki STM32Cube updates seçeneğinin yanından Connection to myST seçeneğinin seçilmesi gerekmektedir.
 
 <div align="center">
@@ -85,8 +95,6 @@ Daha sonra açılan pencerede STMicroelectronics kısmına giriyoruz ve TouchGFX
 
 
 **Gerekli Kurulumlar Tamamlanmıştır.**
-
-
 
 
 
