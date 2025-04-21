@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.25.0">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Group1" />
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_6K4B" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Player 1</Translation>
+      </Text>
+      <Text Id="__SingleUse_7WAY" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_B4W9" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_3UUZ" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_KU51" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_9P0W" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_IU4W" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">P1</Translation>
+      </Text>
+      <Text Id="__SingleUse_28DI" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">P2</Translation>
+      </Text>
+      <Text Id="__SingleUse_JEB9" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Menu</Translation>
+      </Text>
+      <Text Id="__SingleUse_8O35" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Restart</Translation>
+      </Text>
+      <Text Id="__SingleUse_RALN" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Back</Translation>
+      </Text>
+      <Text Id="__SingleUse_DE3G" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Time Mod</Translation>
+      </Text>
+      <Text Id="__SingleUse_6DKR" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Friend Mod</Translation>
+      </Text>
+      <Text Id="__SingleUse_HXEI" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Menu</Translation>
+      </Text>
+      <Text Id="__SingleUse_IYLX" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Friend Mod</Translation>
+      </Text>
+      <Text Id="__SingleUse_8O76" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Time Mod</Translation>
+      </Text>
+      <Text Id="__SingleUse_90YA" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Back</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZBHX" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Restart</Translation>
+      </Text>
+      <Text Id="__SingleUse_XQ0J" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z4VD" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_RVUX" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_4J2D" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="a-z 1 2" WildcardCharacterRanges="0-9" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="Typography_00" Font="BOD_R.TTF" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+  </Typographies>
+</TextDatabase>
