@@ -67,12 +67,12 @@ __IO uint8_t User_ButtonState = 0;
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
-static void MX_SPI1_Init(void);
-static void MX_USART2_UART_Init(void);
-static void MX_SPI2_Init(void);
-static void MX_CRC_Init(void);
 static void MX_I2C2_Init(void);
+static void MX_SPI1_Init(void);
+static void MX_SPI2_Init(void);
 static void MX_TIM2_Init(void);
+static void MX_USART2_UART_Init(void);
+static void MX_CRC_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -88,6 +88,7 @@ static void MX_TIM2_Init(void);
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -111,12 +112,12 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_DMA_Init();
-  MX_SPI1_Init();
-  MX_USART2_UART_Init();
-  MX_SPI2_Init();
-  MX_CRC_Init();
   MX_I2C2_Init();
+  MX_SPI1_Init();
+  MX_SPI2_Init();
   MX_TIM2_Init();
+  MX_USART2_UART_Init();
+  MX_CRC_Init();
 	sitronix_hardware_reset();
 	HAL_Delay(300);
 	sitronix_version_get(&handle);
@@ -232,7 +233,7 @@ static void MX_I2C2_Init(void)
 
   /* USER CODE END I2C2_Init 1 */
   hi2c2.Instance = I2C2;
-  hi2c2.Init.Timing = 0x00602173;
+  hi2c2.Init.Timing = 0x00C12166;
   hi2c2.Init.OwnAddress1 = 0;
   hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
@@ -464,8 +465,8 @@ static void MX_DMA_Init(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
@@ -535,8 +536,8 @@ static void MX_GPIO_Init(void)
   HAL_NVIC_SetPriority(EXTI4_15_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
 
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-/* USER CODE END MX_GPIO_Init_2 */
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */

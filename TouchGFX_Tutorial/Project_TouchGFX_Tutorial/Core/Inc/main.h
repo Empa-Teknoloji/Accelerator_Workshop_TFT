@@ -7,7 +7,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2024 STMicroelectronics.
+  * Copyright (c) 2025 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -60,21 +60,11 @@ void Error_Handler(void);
 #define BUTTON_USER_Pin GPIO_PIN_13
 #define BUTTON_USER_GPIO_Port GPIOC
 #define BUTTON_USER_EXTI_IRQn EXTI4_15_IRQn
-#define MCO_Pin GPIO_PIN_0
-#define MCO_GPIO_Port GPIOF
 #define DISPLAY_TE_Pin GPIO_PIN_0
 #define DISPLAY_TE_GPIO_Port GPIOA
 #define DISPLAY_TE_EXTI_IRQn EXTI0_1_IRQn
 #define DISPLAY_RESET_Pin GPIO_PIN_1
 #define DISPLAY_RESET_GPIO_Port GPIOA
-#define USART2_TX_Pin GPIO_PIN_2
-#define USART2_TX_GPIO_Port GPIOA
-#define USART2_RX_Pin GPIO_PIN_3
-#define USART2_RX_GPIO_Port GPIOA
-#define TMS_Pin GPIO_PIN_13
-#define TMS_GPIO_Port GPIOA
-#define TCK_Pin GPIO_PIN_14
-#define TCK_GPIO_Port GPIOA
 #define CTP_RESET_Pin GPIO_PIN_15
 #define CTP_RESET_GPIO_Port GPIOA
 #define DISPLAY_DCX_Pin GPIO_PIN_3

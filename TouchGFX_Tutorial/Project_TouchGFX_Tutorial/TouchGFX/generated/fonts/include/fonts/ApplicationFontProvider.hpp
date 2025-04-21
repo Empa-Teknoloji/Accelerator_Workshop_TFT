@@ -16,14 +16,30 @@ struct Typography
     static const touchgfx::FontId DEFAULT = 0;
     static const touchgfx::FontId LARGE = 1;
     static const touchgfx::FontId SMALL = 2;
+    static const touchgfx::FontId REMAININGTIME = 3;
+    static const touchgfx::FontId SEARCH = 4;
+    static const touchgfx::FontId KEYBOARD = 5;
+    static const touchgfx::FontId DISPLAY = 6;
+    static const touchgfx::FontId MODE = 7;
+    static const touchgfx::FontId CUSTOMBREW = 8;
+    static const touchgfx::FontId EXPLANATION_CUSTOM_COFFEE = 9;
+    static const touchgfx::FontId COFFEE_INGREDIENTS = 10;
 };
 
 struct TypographyFontIndex
 {
-    static const touchgfx::FontId DEFAULT = 0; // verdana_20_4bpp
-    static const touchgfx::FontId LARGE = 1;   // verdana_40_4bpp
-    static const touchgfx::FontId SMALL = 2;   // verdana_10_4bpp
-    static const uint16_t NUMBER_OF_FONTS = 3;
+    static const touchgfx::FontId DEFAULT = 0;                   // verdana_20_4bpp
+    static const touchgfx::FontId LARGE = 1;                     // verdana_40_4bpp
+    static const touchgfx::FontId SMALL = 2;                     // verdana_10_4bpp
+    static const touchgfx::FontId REMAININGTIME = 3;             // verdanab_20_4bpp
+    static const touchgfx::FontId SEARCH = 4;                    // ROCK_TTF_20_4bpp
+    static const touchgfx::FontId KEYBOARD = 0;                  // verdana_20_4bpp
+    static const touchgfx::FontId DISPLAY = 0;                   // verdana_20_4bpp
+    static const touchgfx::FontId MODE = 0;                      // verdana_20_4bpp
+    static const touchgfx::FontId CUSTOMBREW = 5;                // arial_36_4bpp
+    static const touchgfx::FontId EXPLANATION_CUSTOM_COFFEE = 6; // verdana_16_4bpp
+    static const touchgfx::FontId COFFEE_INGREDIENTS = 7;        // verdana_14_4bpp
+    static const uint16_t NUMBER_OF_FONTS = 8;
 };
 
 class ApplicationFontProvider : public touchgfx::FontProvider

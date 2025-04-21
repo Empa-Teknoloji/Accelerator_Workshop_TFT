@@ -6,7 +6,7 @@ STM32CubeIDE, STM32 mikrodenetleyicileri ve mikroişlemcileri için gerekli çev
 Öncelikle [buradan](https://www.st.com/en/development-tools/stm32cubeide.html#get-software) STM32CubeIDE'nin en son versiyonunu indiriniz. Aşağıdaki seçenekler arasından işletim sisteminize uygun olanı indirip kurulumunu gerçekleştirin. İndirme işlemini gerçekleştirmek için lisans sözleşmesini onaylamanız ve myST hesabı oluşturup giriş yapmanız gerekmektedir.
 
 <div align="center">
-  <img width="100%" height="70%" src="../../STM32CubeIDE/Documents/Images/STM32CubeID_download_1.png">
+  <img width="100%" height="70%" src="Documents/Images/STM32CubeID_download_1.png">
 </div>
 <br />
 
@@ -18,7 +18,7 @@ STM32CubeIDE, STM32 mikrodenetleyicileri ve mikroişlemcileri için gerekli çev
 Öncelikle STM32CubeIDE'yi başlatıyoruz. Paketlerin kurulumu işlemi için mySt hesabının girilmesi gerekmektedir. Bunun için Help sekmesinin altındaki STM32Cube updates seçeneğinin yanından Connection to myST seçeneğinin seçilmesi gerekmektedir.
 
 <div align="center">
-  <img width="80%" height="70%" src="../../STM32CubeIDE/Documents/Images/STM32CubeID_download_2.png">
+  <img width="80%" height="70%" src="Documents/Images/STM32CubeID_download_2.png">
 </div>
 <br />
 
@@ -31,14 +31,14 @@ Uygulamalarda STM32G0 ailesinden bir mikrodenetleyici kullanılacağı için G0 
 STM32CubeIDE uygulaması içerisinde Help sekmesi altında Configuration Tools seçeneğinin yanındaki Manage Embedded Software Packages seçeneğine tıklayınız.
 
 <div align="center">
-  <img width="80%" height="70%" src="../../STM32CubeIDE/Documents/Images/STM32CubeID_download_3.png">
+  <img width="80%" height="70%" src="Documents/Images/STM32CubeID_download_3.png">
 </div>
 <br />
 
 Ardından STM32Cube MCU Packages sekmesi altında STM32G0 yazılım paketinin en son sürümününü indiriniz.
 
 <div align="center">
-  <img width="80%" height="70%" src="../../STM32CubeIDE/Documents/Images/STM32CubeID_download_4.png">
+  <img width="80%" height="70%" src="Documents/Images/STM32CubeID_download_4.png">
 </div>
 <br />
 
@@ -60,7 +60,7 @@ TouchGFX arayüzlerini (GUI) geliştirmek ve tasarlamak için TouchGFX Designer 
 İndirme işlemini gerçekleştirmek için lisans sözleşmesini onaylamanız ve myST hesabı oluşturup giriş yapmanız gerekmektedir.
 
 <div align="center">
-  <img width="100%" height="70%" src="../../STM32CubeIDE/Documents/Images/X-CUBE-TOUCHGFX_download.png">
+  <img width="100%" height="70%" src="Documents/Images/X-CUBE-TOUCHGFX_download.png">
 </div>
 <br />
 
@@ -71,14 +71,14 @@ Daha sonra indirilen zip dosyasının içerisindeki Utilities klasöründe bulun
 Öncelikle STM32CubeIDE programını başlatınız. Açılan STM32CubeIDE uygulaması içerisinde Help sekmesi altında Configuration Tools seçeneğinin yanındaki Manage Embedded Software Packages seçeneğine tıklayınız.
 
 <div align="center">
-  <img width="80%" height="70%" src="../../STM32CubeIDE/Documents/Images/Touchgfx_Software_download_1.png">
+  <img width="80%" height="70%" src="Documents/Images/Touchgfx_Software_download_1.png">
 </div>
 <br />
 
 Daha sonra açılan pencerede STMicroelectronics kısmına giriyoruz ve TouchGFX Generator yazılım paketinin son sürümünü indiriyoruz.
  
 <div align="center">
-  <img width="80%" height="70%" src="../../STM32CubeIDE/Documents/Images/Touchgfx_Software_download_2.png">
+  <img width="80%" height="70%" src="Documents/Images/Touchgfx_Software_download_2.png">
 </div>
 <br />
 

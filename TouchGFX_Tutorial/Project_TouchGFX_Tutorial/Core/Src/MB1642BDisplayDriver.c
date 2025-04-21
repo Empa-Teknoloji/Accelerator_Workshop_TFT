@@ -168,7 +168,8 @@ extern sitronix_handle_t handle;
 uint8_t updated;
 uint16_t x0;
 uint16_t y0;
-
+uint32_t lastInterruptTime = 0;
+const uint32_t debounceDelay = 200;
 void HAL_GPIO_EXTI_Rising_Callback(uint16_t GPIO_Pin) {
 	UNUSED(GPIO_Pin);
 
@@ -176,11 +177,13 @@ void HAL_GPIO_EXTI_Rising_Callback(uint16_t GPIO_Pin) {
 		button_pressed++;
 	}
 	else if (GPIO_Pin == CPT_INT_Pin) {
-		HAL_NVIC_DisableIRQ(EXTI4_15_IRQn);
-		sitronix_get_coordinates(&handle, &updated, &x0, &y0);
-		HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
-		//touchgfxSignalVSync();
-
+	    uint32_t currentTime = HAL_GetTick();
+	    if (currentTime - lastInterruptTime > debounceDelay) {
+	        HAL_NVIC_DisableIRQ(EXTI4_15_IRQn);
+	        sitronix_get_coordinates(&handle, &updated, &x0, &y0);
+	        HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
+	        lastInterruptTime = currentTime;
+	    }
 	}else{
 		TE++;
 		(&htim2)->Instance->CR1 &= ~(TIM_CR1_CEN);
