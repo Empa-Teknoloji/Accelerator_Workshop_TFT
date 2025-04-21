@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.25.0">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Group1">
+      <Text Id="AlphaMode" Alignment="Left" TypographyId="Mode">
+        <Translation Language="GB">123</Translation>
+      </Text>
+      <Text Id="NumMode" Alignment="Left" TypographyId="Mode">
+        <Translation Language="GB">ABC</Translation>
+      </Text>
+      <Text Id="EnteredText" Alignment="Left" TypographyId="Display">
+        <Translation Language="GB">&lt;placeholder&gt;</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_4DB7" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">sa</Translation>
+      </Text>
+      <Text Id="__SingleUse_890P" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">Text5&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_HHHP" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">Text4&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_P1MO" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_22OT" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">Text1&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_H6YA" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_J8TD" Alignment="Left" TypographyId="coffee_ingredients">
+        <Translation Language="GB">Save</Translation>
+      </Text>
+      <Text Id="__SingleUse_NKT5" Alignment="Left" TypographyId="coffee_ingredients">
+        <Translation Language="GB">Cancel</Translation>
+      </Text>
+      <Text Id="__SingleUse_JYTL" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">Enter name&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_H5EN" Alignment="Left" TypographyId="explanation_custom_coffee">
+        <Translation Language="GB">Customize Your Coffee</Translation>
+      </Text>
+      <Text Id="__SingleUse_O3WF" Alignment="Left" TypographyId="coffee_ingredients">
+        <Translation Language="GB">Milk:&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_BIT3" Alignment="Left" TypographyId="coffee_ingredients">
+        <Translation Language="GB">Hot Water:&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_J9QH" Alignment="Left" TypographyId="coffee_ingredients">
+        <Translation Language="GB">Espresso:&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_2LM6" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">+ Add New Coffee</Translation>
+      </Text>
+      <Text Id="__SingleUse_4HTE" Alignment="Left" TypographyId="explanation_custom_coffee">
+        <Translation Language="GB">Create your own coffee and&#10;save your coffees.</Translation>
+      </Text>
+      <Text Id="__SingleUse_0O2D" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">No Custom Coffee Yet</Translation>
+      </Text>
+      <Text Id="__SingleUse_CWNJ" Alignment="Left" TypographyId="custombrew">
+        <Translation Language="GB">Custom Brew</Translation>
+      </Text>
+      <Text Id="__SingleUse_TL5X" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">Custom&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_JZ20" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">Mocca</Translation>
+      </Text>
+      <Text Id="__SingleUse_66UU" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">Custom</Translation>
+      </Text>
+      <Text Id="__SingleUse_9TUO" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Scan to Learn More</Translation>
+      </Text>
+      <Text Id="__SingleUse_QCPA" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">Moccahino</Translation>
+      </Text>
+      <Text Id="hotwater" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">Hot Water</Translation>
+      </Text>
+      <Text Id="latte" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">Latte</Translation>
+      </Text>
+      <Text Id="cappuccino" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">Cappuccino</Translation>
+      </Text>
+      <Text Id="espresso" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">Espresso</Translation>
+      </Text>
+      <Text Id="americano" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">Americano</Translation>
+      </Text>
+      <Text Id="wildcard1" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">000</Translation>
+      </Text>
+      <Text Id="text" Alignment="Left" TypographyId="RemainingTime">
+        <Translation Language="GB">Remaning Time : &lt;value&gt;</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="RemainingTime" Font="verdanab.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Search" Font="ROCK.TTF" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Keyboard" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Display" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Mode" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="custombrew" Font="arial.ttf" Size="36" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="explanation_custom_coffee" Font="verdana.ttf" Size="16" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="coffee_ingredients" Font="verdana.ttf" Size="14" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+  </Typographies>
+</TextDatabase>
