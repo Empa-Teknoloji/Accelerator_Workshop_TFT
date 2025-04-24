@@ -83,8 +83,8 @@ public:
 
 private:
     //two buffers with one whole screen line ARGB is required
-    uint8_t buffer1[1280]; // 32 bit allign
-    uint8_t buffer2[1280]; // 32 bit allign
+    uint8_t buffer1[960]; // 32 bit allign
+    uint8_t buffer2[960]; // 32 bit allign
     bool readToBuffer1;
 };
 

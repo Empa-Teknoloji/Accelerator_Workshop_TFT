@@ -118,11 +118,6 @@ int main(void)
   MX_TIM2_Init();
   MX_USART2_UART_Init();
   MX_CRC_Init();
-	sitronix_hardware_reset();
-	HAL_Delay(300);
-	sitronix_version_get(&handle);
-	sitronix_status_get(&handle);
-	sitronix_close_multitouch(&handle);
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
 
