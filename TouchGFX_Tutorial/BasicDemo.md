@@ -32,7 +32,7 @@ Kısacası hem fiziksel butonla hem de ekrandaki butonlarla etkileşim kurduğum
     </div>
    <br />
 
-4- Böylece grafik arayüzümüzü tasarlayacağımız TouchGFX Designer ekranı açılmış oluyor. Oluşan screen'in adını Screen1 olarak değiştiriyoruz.
+4- Böylece grafik arayüzümüzü tasarlayacağımız TouchGFX Designer ekranı açılmış oluyor.
 
    <div align="center">
     <img width="50%" height="80%" src="../Documents/Images/BasicDemo/bos_project.png">
@@ -40,42 +40,37 @@ Kısacası hem fiziksel butonla hem de ekrandaki butonlarla etkileşim kurduğum
    <br />
 
 ## Adım 2: Arayüz Tasarımını Yapmak
-1- Öncelikle oluşan screen'in adını Screen1 olarak değiştiriyoruz.
 
-   <div align="center">
-    <img width="50%" height="80%" src="../Documents/Images/BasicDemo/screen_rename.png">
-    </div>
-   <br />
 
-2- Daha sonra ilk olarak arkaplan görseli ekleyerek başlıyoruz. Widget Panel'den Images alanından image öğesini ekliyoruz.
+1- İlk olarak arkaplan görseli ekleyerek başlıyoruz. Widget Panel'den Images alanından image öğesini ekliyoruz.
 
    <div align="center">
     <img width="50%" height="80%" src="../Documents/Images/BasicDemo/add_images.png">
     </div>
    <br />
 
-3- Image ekledikten, ekranın sağ tarafındaki 'Properties' (özellikler) bölümünden arka planı seçiyoruz.
+2- Image ekledikten, ekranın sağ tarafındaki 'Properties' (özellikler) bölümünden arka planı seçiyoruz.
 
    <div align="center">
     <img width="50%" height="80%" src="../Documents/Images/BasicDemo/background_select.png">
     </div>
    <br />
 
-4- Daha sonra  Widget Panel'den Shapes alanından Box With Border öğesini ekliyoruz ve ekrana uygun bir şekilde yerleştiriyoruz.
+3- Daha sonra  Widget Panel'den Shapes alanından Box With Border öğesini ekliyoruz ve ekrana uygun bir şekilde yerleştiriyoruz.
 
    <div align="center">
     <img width="50%" height="80%" src="../Documents/Images/BasicDemo/box_with_border.png">
     </div>
    <br />
 
-5- Box'u ekledikten sonra, sayaç değerini gösterecek yazıyı ekliyoruz. Bunun için yine Widget Panel'den Miscellaneous alanından 'TextArea' öğesini seçip ekran üzerine yerleştiriyoruz.
+4- Box'u ekledikten sonra, sayaç değerini gösterecek yazıyı ekliyoruz. Bunun için yine Widget Panel'den Miscellaneous alanından 'TextArea' öğesini seçip ekran üzerine yerleştiriyoruz.
 
    <div align="center">
     <img width="50%" height="80%" src="../Documents/Images/BasicDemo/textarea.png">
     </div>
    <br />
 
-6- TextArea’yı ekledikten sonra, sağ taraftaki Properties bölümünden bazı ayarlar yapmamız gerekiyor.  
+5- TextArea’yı ekledikten sonra, sağ taraftaki Properties bölümünden bazı ayarlar yapmamız gerekiyor.  
 
 * İlk olarak, Translation alanına geliyoruz ve buradan bir Wildcard ekliyoruz.
   
@@ -113,7 +108,7 @@ Kısacası hem fiziksel butonla hem de ekrandaki butonlarla etkileşim kurduğum
     </div>
    <br />
 
-7- Şimdi Reset Butonunu Ekleyelim.
+6- Şimdi Reset Butonunu Ekleyelim.
 
 * Widget Panel üzerinden Button with Label öğesini sürükleyip ekranımıza bırakıyoruz.
 
@@ -143,7 +138,7 @@ Kısacası hem fiziksel butonla hem de ekrandaki butonlarla etkileşim kurduğum
     </div>
    <br />
 
-8- İkinci bir yeni ekran ekleyelim.
+7- İkinci bir yeni ekran ekleyelim.
 * Yeni bir ekran eklemek için Screens alanına geliyoruz ve burada bulunan Add Screen butonuna basarak yeni bir ekran oluşturuyoruz. 
 
    <div align="center">
@@ -193,7 +188,7 @@ Kısacası hem fiziksel butonla hem de ekrandaki butonlarla etkileşim kurduğum
     </div>
    <br />
 
-9- İlk ekranımıza ekran geçiş butonu ekleyelim.
+8- İlk ekranımıza ekran geçiş butonu ekleyelim.
 * Ekran geçişi için kullanacağımız butonu eklemekle başlıyoruz. Bunun için, Widget Panel’den Button with Label öğesini sahneye ekliyoruz.
 
    <div align="center">
@@ -222,7 +217,7 @@ Kısacası hem fiziksel butonla hem de ekrandaki butonlarla etkileşim kurduğum
     </div>
    <br />
 
-10- Arayüz tasarımımızı tamamladık. Şimdi projemizi oluşturmak için TouchGFX Designer'da sağ üst köşede bulunan "Generate" butonuna tıklıyoruz. Generate butonuna bastıktan sonra TouchGFX, arayüz tasarımımızı STM32CubeIDE ile uyumlu hale getirecek ve gerekli dosyalar otomatik olarak oluşturulacaktır.
+9- Arayüz tasarımımızı tamamladık. Şimdi projemizi oluşturmak için TouchGFX Designer'da sağ üst köşede bulunan "Generate" butonuna tıklıyoruz. Generate butonuna bastıktan sonra TouchGFX, arayüz tasarımımızı STM32CubeIDE ile uyumlu hale getirecek ve gerekli dosyalar otomatik olarak oluşturulacaktır.
 
    <div align="center">
     <img width="50%" height="80%" src="../Documents/Images/BasicDemo/generate_project.png">
