@@ -2,7 +2,7 @@
   "Application": {
     "Screens": [
       {
-        "Name": "screen",
+        "Name": "Screen1",
         "Components": [],
         "Interactions": []
       }
@@ -14,7 +14,7 @@
       "Height": 320
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "screen",
+    "StartupScreenName": "Screen1",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",
