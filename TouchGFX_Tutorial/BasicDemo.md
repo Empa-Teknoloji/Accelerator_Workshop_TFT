@@ -252,36 +252,27 @@ Butonla sayaç değerini artırmak istediğimizde:
     </div>
    <br />
 
-2- Projemiz açıldıktan sonra TouchGFX/gui/src/model/Model.cpp dosyasına gidiyoruz. Burada donanım ile ilgili işlemleri gerçekleştireceğimiz kodları yazacağız.
+2- Projemiz açıldıktan sonra **TouchGFX/gui/src/model/Model.cpp**  dosyasına gidiyoruz. Burada donanım ile ilgili işlemleri gerçekleştireceğimiz kodları yazacağız.
 
-* Aşağıdaki gibi Model.cpp dosyasına gerekli başlık dosyasını ekliyoruz (diğer başlık dosyalarının altına ekleyebiliriz).
-
-   ```c
-   #include "main.h" 
-   ```
-
-* Ardından, buton pinini tanımlamak için pin ve port bilgilerini ekliyoruz (başlık dosyalarından sonra ekleyebiliriz).
+Bu kod, fiziksel bir butona basıldığında sayaç değerini artırır ve bu değeri ekrana gönderir. tick() fonksiyonu her karede çağrılır, butonun durumu okunur. Eğer butona basılmışsa, sayaç bir artırılır. Yeni sayaç değeri modelListener aracılığıyla ekrana (Presenter üzerinden View'e) gönderilir. setCounter() fonksiyonu ise sayacı sıfırlamak veya istenilen değere ayarlamak için kullanılır.
 
    ```c
+   #include <gui/model/Model.hpp>
+   #include <gui/model/ModelListener.hpp>
+
+   #include "main.h"
+
    #define BUTTON_PIN GPIO_PIN_13
    #define BUTTON_PORT GPIOC
-   ```
 
-* Model sınıfının yapıcısında, counterplus, prevButtonState ve currentButtonState değişkenlerinin ilk değerlerini başlatmak için, modelListener(0) ifadesinin yanına virgülle ekliyoruz.
-
-   ```c
-   Model::Model() : modelListener(0),counterplus(0),prevButtonState(false),currentButtonState(false) 
+   Model::Model() : modelListener(0),counterplus(0),prevButtonState(false),currentButtonState(false)
    {
 
    }
-   ```
 
-* TouchGFX framework’ü tarafından her frame’de çağrılan tick() fonksiyonunu, butona basıldığında sayacı artıracak şekilde aşağıdaki gibi tanımlıyoruz (Model.cpp de bulunan tick() foksiyonunun üzerine yazıyoruz bunu).
-
-   ```c
    void Model::tick()
    {
-      bool currentButtonState = HAL_GPIO_ReadPin(BUTTON_PORT, BUTTON_PIN) == 0; 
+      bool currentButtonState = HAL_GPIO_ReadPin(BUTTON_PORT, BUTTON_PIN) == 0;
 
       if (currentButtonState && !prevButtonState) {
          counterplus++;
@@ -291,41 +282,98 @@ Butonla sayaç değerini artırmak istediğimizde:
 
       modelListener->upCounter(counterplus);
    }
-   ```
 
-* Sayacı sıfırlamak için aşağıdaki fonksiyonu Model sınıfına ekliyoruz. Bu fonksiyon, dışarıdan bir değer alır ve bu değeri sayaca atar. Eğer 0 değeri verilirse, sayaç sıfırlanır.
-
-   ```c
    void Model::setCounter(int value)
    {
       counterplus = value;
    }
+
    ```
 
-3-Bu adımda, sayaç değerini ve buton durumunu saklamak için bazı değişkenleri TouchGFX/gui/include/gui/model/Model.hpp dosyasına ekliyoruz. Ayrıca, bu verileri işleyecek fonksiyon prototiplerini de ekliyoruz.
+3-Bu adımda, sayaç değerini ve buton durumunu saklamak için bazı değişkenleri **TouchGFX/gui/include/gui/model/Model.hpp** dosyasına ekliyoruz. Ayrıca, bu verileri işleyecek fonksiyon prototiplerini de ekliyoruz.
 
-* public kısmına aşağıdaki fonksiyon prototipini ekliyoruz.
    ```c
-   void setCounter(int value);
+   #ifndef MODEL_HPP
+   #define MODEL_HPP
+
+   class ModelListener;
+
+   class Model
+   {
+   public:
+      Model();
+
+      void bind(ModelListener* listener)
+      {
+         modelListener = listener;
+      }
+
+      void tick();
+      void setCounter(int value);
+
+   protected:
+      ModelListener* modelListener;
+      int counterplus;
+      bool currentButtonState;
+      bool prevButtonState;
+
+
+   };
+
+   #endif // MODEL_HPP
+
    ```
 
-* Protect kısmına aşağıdaki değişkenleri ekliyoruz.
+4-Bu adımda, Model tarafından güncellenen sayaç değerini Presenter'a iletebilmek için **/gui/include/gui/model/ModelListener.hpp** dosyasının public kısmına upCounter fonksiyonunu ekliyoruz.
 
    ```c
-   int counterplus;
-   bool currentButtonState;
-   bool prevButtonState;
+   #ifndef MODELLISTENER_HPP
+   #define MODELLISTENER_HPP
+
+   #include <gui/model/Model.hpp>
+
+   class ModelListener
+   {
+   public:
+      ModelListener() : model(0) {}
+      
+      virtual ~ModelListener() {}
+
+      void bind(Model* m)
+      {
+         model = m;
+      }
+      virtual void upCounter( int counterplus){};
+
+   protected:
+      Model* model;
+   };
+
+   #endif // MODELLISTENER_HPP
    ```
 
-4-Bu adımda, Model tarafından güncellenen sayaç değerini Presenter'a iletebilmek için TouchGFX/gui/include/gui/model/ModelListener.hpp dosyasının public kısmına upCounter fonksiyonunu ekliyoruz.
+5-Bu adımda, Presenter sınıfında, Model tarafından güncellenen sayaç değerini View'a iletecek fonksiyonları ekliyoruz.**TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp** dosyasına aşağıdaki iki fonksiyonu ekliyoruz.
 
    ```c
-   virtual void upCounter( int counterplus){};
-   ```
+   #include <gui/screen1_screen/Screen1View.hpp>
+   #include <gui/screen1_screen/Screen1Presenter.hpp>
 
-5-Bu adımda, Presenter sınıfında, Model tarafından güncellenen sayaç değerini View'a iletecek fonksiyonları ekliyoruz.TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp dosyasına aşağıdaki iki fonksiyonu ekliyoruz.
+   Screen1Presenter::Screen1Presenter(Screen1View& v)
+      : view(v)
+   {
 
-   ```c
+   }
+
+   void Screen1Presenter::activate()
+   {
+
+   }
+
+   void Screen1Presenter::deactivate()
+   {
+
+   }
+
    void Screen1Presenter::upCounter(int counterplus)
    {
       view.upCounter(counterplus);
@@ -335,28 +383,77 @@ Butonla sayaç değerini artırmak istediğimizde:
    {
       model->setCounter(value);
    }
+
    ```
 
-6-Bu adımda, bir önceki adımda Screen1Presenter.cpp dosyasına eklediğimiz fonksiyonların prototiplerini, TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp dosyasında public kısmına ekliyoruz.  
+6-Bu adımda, bir önceki adımda Screen1Presenter.cpp dosyasına eklediğimiz fonksiyonların prototiplerini, **TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp** dosyasında public kısmına ekliyoruz.  
 
    ```c
-   virtual void upCounter(int counterplus);
-   void setCounter(int value);
+   #ifndef SCREEN1PRESENTER_HPP
+   #define SCREEN1PRESENTER_HPP
+
+   #include <gui/model/ModelListener.hpp>
+   #include <mvp/Presenter.hpp>
+
+   using namespace touchgfx;
+
+   class Screen1View;
+
+   class Screen1Presenter : public touchgfx::Presenter, public ModelListener
+   {
+   public:
+      Screen1Presenter(Screen1View& v);
+
+      /**
+      * The activate function is called automatically when this screen is "switched in"
+      * (ie. made active). Initialization logic can be placed here.
+      */
+      virtual void activate();
+
+      /**
+      * The deactivate function is called automatically when this screen is "switched out"
+      * (ie. made inactive). Teardown functionality can be placed here.
+      */
+      virtual void deactivate();
+
+      virtual ~Screen1Presenter() {}
+
+      virtual void upCounter(int counterplus);
+      void setCounter(int value);
+
+   private:
+      Screen1Presenter();
+
+      Screen1View& view;
+   };
+
+   #endif // SCREEN1PRESENTER_HPP
+
    ```
 
-7-Bu adımda, View sınıfında sayaç değerini ekranda gösterecek ve sıfırlayacak fonksiyonları TouchGFX/gui/src/screen1_screen/Screen1View.cpp dosyasına ekliyoruz.
-
-* Öncelikle, constructor (yapıcı fonksiyon) içinde counter değişkenini 0 olarak başlatıyoruz.
-* 
+7-Bu adımda, View sınıfında sayaç değerini ekranda gösterecek ve sıfırlayacak fonksiyonları **TouchGFX/gui/src/screen1_screen/Screen1View.cpp** dosyasına ekliyoruz.
+ 
    ```c
-   Screen1View::Screen1View(): resetNum(0)
+
+   #include <gui/screen1_screen/Screen1View.hpp>
+   #include "stm32g0xx_hal.h"
+
+   Screen1View::Screen1View(): counter(0)
    {
 
    }
-   ```
-* Ardından, sayaç değerini güncellemek ve ekranda göstermek için upCounter() fonksiyonunu, sayacı sıfırlamak için ise resetCounter() fonksiyonunu ekliyoruz.
-  
-   ```c
+
+   void Screen1View::setupScreen()
+   {
+      Screen1ViewBase::setupScreen();
+   }
+
+   void Screen1View::tearDownScreen()
+   {
+      Screen1ViewBase::tearDownScreen();
+   }
+
+
    void Screen1View::upCounter(int number)
    {
       Unicode::snprintf(textArea1Buffer,TEXTAREA1_SIZE,"%u",number);
@@ -365,24 +462,38 @@ Butonla sayaç değerini artırmak istediğimizde:
 
    void Screen1View::resetCounter()
    {
-      presenter ->setCounter(resetNum);
-      Unicode::snprintf(textArea1Buffer,TEXTAREA1_SIZE,"%u",resetNum);
+      presenter ->setCounter(0);
+      Unicode::snprintf(textArea1Buffer,TEXTAREA1_SIZE,"%u",0);
       textArea1.invalidate();
    }
    ```
 
-8-Bu adımda, Screen1View sınıfına ait fonksiyon prototiplerini ve sayaç değişkenini tanımlıyoruz. Bunun için TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp dosyasına aşağıdakileri ekliyoruz.
+8-Bu adımda, Screen1View sınıfına ait fonksiyon prototiplerini ve sayaç değişkenini tanımlıyoruz. Bunun için **TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp** dosyasına aşağıdakileri ekliyoruz.
 
 * public kısmına aşağıdaki fonksiyon prototiplerini ekliyoruz.
    ```c
-   virtual void upCounter(int number);
-   virtual void resetCounter();
-   ```
+   #ifndef SCREEN1VIEW_HPP
+   #define SCREEN1VIEW_HPP
 
-* Protect kısmına aşağıdaki değişkenleri ekliyoruz.
+   #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
+   #include <gui/screen1_screen/Screen1Presenter.hpp>
 
-   ```c
-   uint16_t resetNum;
+   class Screen1View : public Screen1ViewBase
+   {
+   public:
+      Screen1View();
+      virtual ~Screen1View() {}
+      virtual void setupScreen();
+      virtual void tearDownScreen();
+
+      virtual void upCounter(int number);
+      virtual void resetCounter();
+   protected:
+      uint16_t counter;
+   };
+
+   #endif // SCREEN1VIEW_HPP
+
    ```
 
 ## Adım 4: Projeyi STM32 Kartına Yükleme
